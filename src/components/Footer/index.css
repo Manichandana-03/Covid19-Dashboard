@@ -1,0 +1,93 @@
+.footer-container {
+  background-color: #161625;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 50px;
+}
+
+.heading {
+  color: #f8fafc;
+  font-family: 'Bree Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  width: 130px;
+  height: 32px;
+}
+.india-color {
+  color: #3b82f6;
+}
+@media screen and (min-width: 768px) {
+  .heading {
+    color: #f8fafc;
+    font-family: 'Bree Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+    width: 156px;
+    height: 32px;
+  }
+}
+.description {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  text-align: center;
+
+  /* Light / blue-gray / 400 */
+
+  color: #94a3b8;
+}
+@media screen and (min-width: 768px) {
+  .description {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+.react-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.icons {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26.0279px;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* identical to box height */
+
+  text-align: center;
+
+  /* Light / blue-gray / 300 */
+
+  color: #cbd5e1;
+}
+@media screen and (min-width: 768px) {
+  .react-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 25%;
+  }
+  .icons {
+    font-size: 52.9233px;
+    margin: 20px;
+  }
+}

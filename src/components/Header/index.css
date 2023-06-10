@@ -1,0 +1,57 @@
+.nav-container {
+  background-color: #1e1e30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 100%;
+}
+
+.link-decoration {
+  text-decoration: none;
+}
+.covid-heading {
+  font-family: 'Bree Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  /* identical to box height, or 120% */
+
+  text-align: center;
+
+  /* Light / cblue-gray / 50 */
+
+  color: #f8fafc;
+}
+.india-color {
+  color: #3b82f6;
+}
+.nav-menu {
+}
+.nav-item {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  /* identical to box height, or 150% */
+
+  /* Light / blue-gray / 50 */
+
+  color: #f8fafc;
+  border: 0px;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  padding: 20px;
+}
+
+.grey {
+  color: #94a3b8;
+  font-weight: 400;
+}
