@@ -1,57 +1,164 @@
-.nav-container {
+.header-list {
+  width: 100%;
   background-color: #1e1e30;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  padding-left: 100px;
-  padding-right: 100px;
-  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.link-decoration {
+@media screen and (min-width: 768px) {
+  .header-list {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.link-logo {
   text-decoration: none;
+  cursor: pointer;
+  outline: none;
 }
-.covid-heading {
+
+.app-name {
   font-family: 'Bree Serif';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
-
-  /* identical to box height, or 120% */
-
   text-align: center;
-
-  /* Light / cblue-gray / 50 */
-
   color: #f8fafc;
 }
-.india-color {
+
+@media screen and (min-width: 768px) {
+  .app-name {
+    font-size: 20px;
+  }
+}
+
+.blue-text {
   color: #3b82f6;
 }
-.nav-menu {
+
+.menu-button {
+  background-color: transparent;
+  border: 0px;
 }
-.nav-item {
+
+.nav-list {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.nav-items {
+  background-color: transparent;
+  border: 0px;
+  padding-right: 24px;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #161625;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.close-item {
+  align-self: flex-end;
+}
+
+.close-button {
+  background-color: transparent;
+  border: 0px;
+}
+
+.link-name-highlight {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  text-decoration: none;
-  /* identical to box height, or 150% */
-
-  /* Light / blue-gray / 50 */
-
-  color: #f8fafc;
-  border: 0px;
   background-color: transparent;
-  cursor: pointer;
-  outline: none;
-  padding: 20px;
+  border: 0px;
+  color: #94a3b8;
+  padding-right: 30px;
 }
 
-.grey {
-  color: #94a3b8;
+.link-name {
+  font-family: 'Roboto';
+  font-style: normal;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: transparent;
+  border: 0px;
+  color: #94a3b8;
+  padding-right: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .link-name-highlight {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: transparent;
+    border: 0px;
+    color: #f8fafc;
+  }
+
+  .link-name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: transparent;
+    border: 0px;
+    color: #94a3b8;
+  }
+}
+
+.link-item {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #94a3b8;
+}
+
+.menu-spacing {
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-list {
+    display: none;
+  }
 }
