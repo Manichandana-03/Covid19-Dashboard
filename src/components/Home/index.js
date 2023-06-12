@@ -1,13 +1,11 @@
 import Header from '../Header'
 import HomeRoute from '../HomeRoute'
-import Footer from '../Footer'
 
 const Home = () => (
-  <>
+  <div className="background-color">
     <Header />
     <HomeRoute />
-    <Footer />
-  </>
+  </div>
 )
 
 export default Home

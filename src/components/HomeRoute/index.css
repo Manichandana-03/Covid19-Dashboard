@@ -1,0 +1,141 @@
+.home-search {
+  display: flex;
+  flex-direction: column;
+  width: 824px;
+  margin-top: 75px;
+}
+.home-search-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 52px;
+  background: #2f2f43;
+  border-radius: 8px;
+}
+.search-icon {
+  color: #94a3b8;
+  margin-left: 30px;
+}
+input:focus {
+  outline: none;
+}
+
+.search-input {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #94a3b8;
+  margin-left: 10px;
+  background-color: #2f2f43;
+  border: 0px;
+}
+.covid-home-container {
+  background-color: #161625;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loader-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #161625;
+}
+
+.card-container-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 75px;
+  margin-bottom: 65px;
+  width: 100%;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-paragraph-heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.paragraph-heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height, or 100% */
+
+  text-align: center;
+}
+.red {
+  color: #ff073a;
+}
+.blue {
+  color: #007bff;
+}
+.green {
+  color: #28a745;
+}
+.gray {
+  color: #6c757d;
+}
+
+.state-table {
+  display: flex;
+  flex-direction: column;
+  background: #1e1e30;
+  border: 1px solid #475569;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+  border-radius: 12px;
+  width: 80%;
+}
+.state-result-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 1px solid #475569;
+  border: 2px solid orange;
+}
+.state-ul-container {
+  display: flex;
+  flex-direction: row;
+}
+.home-table-state-paragraph {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f8fafc;
+}
+.general-column-title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f8fafc;
+}
+.icon-button {
+  background-color: transparent;
+  border: 0px;
+}
+.state-result-table {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}

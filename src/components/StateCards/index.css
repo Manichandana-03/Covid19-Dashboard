@@ -1,0 +1,49 @@
+.stateCards-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.background-color {
+  background-color: #331427;
+}
+.StateCard-background {
+}
+.Confirmed {
+  background-color: #331427;
+}
+.Active {
+  background-color: #132240;
+}
+.Recovered {
+  background-color: #182829;
+}
+.Decreased {
+  background-color: #212230;
+}
+
+.home-paragraph-heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+.paragraph-heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+}
+.red {
+  color: #ff073a;
+}
+.blue {
+  color: #007bff;
+}
+.green {
+  color: #28a745;
+}
+.grey {
+  color: #6c757d;
+}

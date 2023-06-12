@@ -6,6 +6,9 @@ import {FcGenericSortingAsc, FcGenericSortingDesc} from 'react-icons/fc'
 
 import ListOfState from '../ListOfState'
 import SearchState from '../SearchState'
+import Footer from '../Footer'
+
+import './index.css'
 
 const statesList = [
   {
@@ -267,15 +270,14 @@ class HomeRoute extends Component {
   listOfStateTable = () => {
     const {listOfCovidStates} = this.state
     return (
-      <div className="state-table" /* testid="stateWiseCovidDataTable" */>
+      <div className="state-table">
         <div className="state-result-heading">
-          <div className="state-ul-holder">
+          <div className="state-ul-container">
             <p className="home-table-state-paragraph">States/UT</p>
             <button
               type="button"
               className="icon-button"
               onClick={this.ascSortClicked}
-              /* testid="ascending-icon" */
             >
               <FcGenericSortingAsc className="ascending-icon" />
             </button>
@@ -283,7 +285,6 @@ class HomeRoute extends Component {
               type="button"
               className="icon-button"
               onClick={this.decSortClicked}
-              /* testid="descending-icon" */
             >
               <FcGenericSortingDesc className="descending-icon" />
             </button>
@@ -306,9 +307,7 @@ class HomeRoute extends Component {
   listOfSearch = () => {
     const {listOfSearchState} = this.state
     return (
-      <ul
-        /* testid="searchResultsUnorderedList" */ className="search-container"
-      >
+      <ul className="search-container">
         {listOfSearchState.map(eachItem => (
           <SearchState
             stateName={eachItem.state_name}
@@ -332,41 +331,41 @@ class HomeRoute extends Component {
     return (
       <>
         <div className="card-container-row">
-          <div className="card-list" /* testid="countryWideConfirmedCases" */>
+          <div className="card-list">
             <p className="home-paragraph-heading red">Confirmed</p>
             <img
               src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416085/Group_wu2hir.png"
               alt="country wide confirmed cases pic"
               className="home-cards-logo"
             />
-            <p className="home-paragraph-heading red">{totalConfirmed}</p>
+            <p className="paragraph-heading red">{totalConfirmed}</p>
           </div>
-          <div className="card-list" /* testid="countryWideActiveCases" */>
+          <div className="card-list">
             <p className="home-paragraph-heading blue">Active</p>
             <img
               src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416117/protection_1_zbily8.png"
               alt="country wide active cases pic"
               className="home-cards-logo"
             />
-            <p className="home-paragraph-heading blue">{totalActive}</p>
+            <p className="paragraph-heading blue">{totalActive}</p>
           </div>
-          <div className="card-list" /* testid="countryWideRecoveredCases" */>
+          <div className="card-list">
             <p className="home-paragraph-heading green">Recovered</p>
             <img
               src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416118/recovered_1_b5nwsn.png"
               alt="country wide recovered cases pic"
               className="home-cards-logo"
             />
-            <p className="home-paragraph-heading green">{totalRecovered}</p>
+            <p className="paragraph-heading green">{totalRecovered}</p>
           </div>
-          <div className="card-list" /* testid="countryWideDecreasedCases" */>
+          <div className="card-list">
             <p className="home-paragraph-heading gray">Decreased</p>
             <img
               src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416117/Corona_Virus_Symptoms_Shortness_of_breath_apqhli.png"
               alt="country wide decreased cases pic"
               className="home-cards-logo"
             />
-            <p className="home-paragraph-heading gray">{totalDecreased}</p>
+            <p className="paragraph-heading gray">{totalDecreased}</p>
           </div>
         </div>
       </>
@@ -380,15 +379,14 @@ class HomeRoute extends Component {
     return (
       <div className="covid-home-container">
         {isLoading ? (
-          <div className="loader-class" /* testid="homeRouteLoader" */>
-            <Loader type="Oval" color="" height={50} width={50} />
+          <div className="loader-class">
+            <Loader type="Oval" color="#007BFF" height={50} width={50} />
           </div>
         ) : (
           <>
             <div className="home-search">
               <div className="home-search-container">
-                {this.loadingFalse}
-                <BsSearch testid="searchIcon" className="search-icon" />
+                <BsSearch className="search-icon" />
                 <input
                   type="search"
                   placeholder="Enter the State"
@@ -400,6 +398,7 @@ class HomeRoute extends Component {
             </div>
             {this.listOfCovidCards()}
             {this.listOfStateTable()}
+            <Footer />
           </>
         )}
       </div>
