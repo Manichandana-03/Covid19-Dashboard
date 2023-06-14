@@ -235,10 +235,10 @@ class StateRoute extends Component {
       districtValue:
         listOfDistrict[eachItem].total.confirmed -
         (listOfDistrict[eachItem].total.recovered +
-          listOfDistrict[eachItem].total.decreased)
+          listOfDistrict[eachItem].total.deceased)
           ? listOfDistrict[eachItem].total.confirmed -
             (listOfDistrict[eachItem].total.recovered +
-              listOfDistrict[eachItem].total.decreased)
+              listOfDistrict[eachItem].total.deceased)
           : 0,
     }))
     stateActiveCase.sort((a, b) => b.districtValue - a.districtValue)
@@ -297,7 +297,8 @@ class StateRoute extends Component {
             months[stateDate.getMonth()]
           } ${stateDate.getDate()} ${stateDate.getFullYear()}`}</p>
         </div>
-        <div className="stateRoute-cards">
+
+        <div className="stateCard-alignment">
           <StateCards
             stateListCards={this.stateListCards}
             totalStateCards={totalState}
@@ -310,22 +311,20 @@ class StateRoute extends Component {
           >
             Top Districts
           </h1>
-          <div className="stateRoute-ul">
-            <div className="stateRoute-ul-container">
-              <ul className="stateRoute-top-district-list">
-                {topDistricts.map(eachItem => (
-                  <TopDistricts
-                    topDistrictsNumber={eachItem.districtValue}
-                    topDistrictsName={eachItem.districtNameList}
-                    key={eachItem.districtNameList}
-                  />
-                ))}
-              </ul>
-            </div>
+          <div className="ul-container">
+            <ul className="stateRoute-top-district-list">
+              {topDistricts.map(eachItem => (
+                <TopDistricts
+                  topDistrictsNumber={eachItem.districtValue}
+                  topDistrictsName={eachItem.districtNameList}
+                  key={eachItem.districtNameList}
+                />
+              ))}
+            </ul>
           </div>
         </div>
         <div className="stateRoute-chart-container">
-          <Charts districtsChart={category} districtCode={stateCode} />
+          <Charts category={category} stateCode={stateCode} />
         </div>
       </div>
     )

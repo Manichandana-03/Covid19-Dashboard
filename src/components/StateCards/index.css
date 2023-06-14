@@ -1,27 +1,24 @@
 .stateCards-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
-}
-.background-color {
-  background-color: #331427;
-}
-.StateCard-background {
-}
-.Confirmed {
-  background-color: #331427;
-}
-.Active {
-  background-color: #132240;
-}
-.Recovered {
-  background-color: #182829;
-}
-.Decreased {
-  background-color: #212230;
-}
+  margin-top: 30px;
+  margin-bottom: 60px;
 
+  width: 80%;
+}
+.stateCard-background {
+  display: flex;
+  background-color: transparent;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 20px;
+  width: 200px;
+  border: 0px;
+}
 .home-paragraph-heading {
   font-family: 'Roboto';
   font-style: normal;
@@ -33,7 +30,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  line-height: 24px;
+  text-align: center;
 }
 .red {
   color: #ff073a;
@@ -46,4 +43,19 @@
 }
 .grey {
   color: #6c757d;
+}
+.background-color {
+  background-color: #331427;
+}
+.Active {
+  background-color: #132240;
+}
+.Recovered {
+  background-color: #182829;
+}
+.Deceased {
+  background-color: #212230;
+}
+.Confirmed {
+  background-color: #331427;
 }

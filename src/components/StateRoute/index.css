@@ -6,12 +6,6 @@
   align-items: center;
   background-color: #161625;
 }
-.loader-class {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
 .state-route-column {
   width: 100%;
@@ -21,7 +15,7 @@
   justify-content: center;
 }
 .state-tested-container {
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -64,6 +58,7 @@
   align-self: flex-start;
   margin-left: 70px;
   margin-top: -6px;
+  margin-left: 10%;
 }
 .stateRoute-date {
   font-family: 'Roboto';
@@ -73,10 +68,55 @@
   color: #cbd5e1;
   margin-top: -5px;
 }
-.stateRoute-cards {
+.stateRoute-top-districts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 90px;
+}
+
+.ul-container {
+  column-count: 4;
+  column-gap: 10px;
+  margin-left: 0px;
+}
+.stateRoute-top-district-list {
+  list-style-type: none;
+  color: #94a3b8;
+}
+
+.stateRoute-top-districts-heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  align-self: flex-start;
+  list-style-type: none;
+}
+.stateRoute-Confirmed {
+  color: #ff073a;
+}
+.stateRoute-Active {
+  color: #007bff;
+}
+.stateRoute-Recovered {
+  color: #28a745;
+}
+.stateRoute-Deceased {
+  color: #6c757d;
+}
+.stateRoute-chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+}
+.stateCard-alignment {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  width: 100%;
 }

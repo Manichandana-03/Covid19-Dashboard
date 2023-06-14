@@ -1,0 +1,24 @@
+.topDistricts-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.topDistricts-paragraph {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 0px;
+
+  color: #94a3b8;
+}
+.topDistricts-name {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+
+  color: #94a3b8;
+  margin-left: 19px;
+  margin-bottom: 0px;
+}

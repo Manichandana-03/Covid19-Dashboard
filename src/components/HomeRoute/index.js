@@ -165,7 +165,7 @@ class HomeRoute extends Component {
     listOfCovidStates: [],
     totalConfirmed: 0,
     totalRecovered: 0,
-    totalDecreased: 0,
+    totalDeceased: 0,
     totalActive: 0,
   }
 
@@ -185,17 +185,17 @@ class HomeRoute extends Component {
       let confirmedCases = 0
       let activeCases = 0
       let recoveredCases = 0
-      let decreasedCases = 0
+      let deceasedCases = 0
 
       statesList.forEach(stateCode => {
         if (data[stateCode.state_code]) {
           const {total} = data[stateCode.state_code]
           confirmedCases += total.confirmed ? total.confirmed : 0
-          decreasedCases += total.decreased ? total.decreased : 0
+          deceasedCases += total.deceased ? total.deceased : 0
           recoveredCases += total.recovered ? total.recovered : 0
         }
       })
-      activeCases += confirmedCases - (recoveredCases + decreasedCases)
+      activeCases += confirmedCases - (recoveredCases + deceasedCases)
 
       const listOfCovidTableStates = statesList.map(eachItem => ({
         stateName: eachItem.state_name,
@@ -206,12 +206,10 @@ class HomeRoute extends Component {
         listOfRecovered: Object.keys(data)
           .filter(stateItem => stateItem === eachItem.state_code)
           .map(each => data[each].total.recovered),
-        listOfDecreased: Object.keys(data)
+        listOfDeceased: Object.keys(data)
           .filter(stateItem => stateItem === eachItem.state_code)
-          .map(each => data[each].total.decreased),
-        listOfOther: Object.keys(data)
-          .filter(stateItem => stateItem === eachItem.state_code)
-          .map(each => data[each].total.other),
+          .map(each => data[each].total.deceased),
+
         listOfPopulation: Object.keys(data)
           .filter(stateItem => stateItem === eachItem.state_code)
           .map(each => data[each].meta.population),
@@ -219,7 +217,7 @@ class HomeRoute extends Component {
 
       this.setState({
         totalConfirmed: confirmedCases,
-        totalDecreased: decreasedCases,
+        totalDeceased: deceasedCases,
         totalRecovered: recoveredCases,
         totalActive: activeCases,
         isLoading: false,
@@ -269,6 +267,8 @@ class HomeRoute extends Component {
 
   listOfStateTable = () => {
     const {listOfCovidStates} = this.state
+    console.log(listOfCovidStates)
+
     return (
       <div className="state-table">
         <div className="state-result-heading">
@@ -292,7 +292,7 @@ class HomeRoute extends Component {
           <p className="general-column-title">Confirmed</p>
           <p className="general-column-title">Active</p>
           <p className="general-column-title">Recovered</p>
-          <p className="general-column-title">Decreased</p>
+          <p className="general-column-title">Deceased</p>
           <p className="general-column-title">Population</p>
         </div>
         <ul className="state-result-table">
@@ -324,7 +324,7 @@ class HomeRoute extends Component {
     const {
       totalConfirmed,
       totalActive,
-      totalDecreased,
+      totalDeceased,
       totalRecovered,
     } = this.state
 
@@ -359,13 +359,13 @@ class HomeRoute extends Component {
             <p className="paragraph-heading green">{totalRecovered}</p>
           </div>
           <div className="card-list">
-            <p className="home-paragraph-heading gray">Decreased</p>
+            <p className="home-paragraph-heading gray">Deceased</p>
             <img
               src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416117/Corona_Virus_Symptoms_Shortness_of_breath_apqhli.png"
               alt="country wide decreased cases pic"
               className="home-cards-logo"
             />
-            <p className="paragraph-heading gray">{totalDecreased}</p>
+            <p className="paragraph-heading gray">{totalDeceased}</p>
           </div>
         </div>
       </>

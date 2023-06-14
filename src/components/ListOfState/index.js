@@ -9,23 +9,27 @@ const ListOfState = props => {
     stateName,
     listOfConfirmed,
     listOfRecovered,
-    listOfOther,
-    listOfDecreased,
+
+    listOfDeceased,
     listOfPopulation,
   } = stateList
-  const active =
-    listOfConfirmed - listOfRecovered - listOfDecreased - listOfOther
+  const active = listOfConfirmed - listOfRecovered - listOfDeceased
+  console.log(`${listOfDeceased}= listOFDeceased`)
+  console.log(`${listOfRecovered}=listOfRecovered`)
+  console.log(`${active}=active`)
 
   return (
     <li className="list-state-class">
       <Link to={`/state/${stateCode}`} className="link-class">
         <p className="state-name-class">{stateName}</p>
       </Link>
-      <p className="state-confirmed">{listOfConfirmed}</p>
-      <p className="state-active">{active}</p>
-      <p className="state-recovered">{listOfRecovered}</p>
-      <p className="state-decreased">{listOfDecreased}</p>
-      <p className="state-population">{listOfPopulation}</p>
+      <div className="stats-container">
+        <p className="state-confirmed">{listOfConfirmed}</p>
+        <p className="state-active">{active}</p>
+        <p className="state-recovered">{listOfRecovered}</p>
+        <p className="state-decreased">{listOfDeceased}</p>
+        <p className="state-population">{listOfPopulation}</p>
+      </div>
     </li>
   )
 }
