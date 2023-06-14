@@ -6,8 +6,9 @@ import './index.css'
 
 const Footer = () => (
   <div className="footer-container">
-    <h1 className="heading">
-      COVID19<span className="india-color">INDIA</span>
+    <h1>
+      <span className="app-name">COVID19</span>
+      <span className="india-color">INDIA</span>
     </h1>
     <p className="description">
       we stand with everyone fighting on the front lines

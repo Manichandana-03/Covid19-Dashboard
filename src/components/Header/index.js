@@ -28,8 +28,9 @@ class Header extends Component {
       <>
         <nav className="header-list">
           <Link to="/" className="link-logo">
-            <span className="app-name">COVID19</span>
-            <span className="app-name blue-text">INDIA</span>
+            <h1 className="app-name white">
+              COVID19<span className="blue-text">INDIA</span>
+            </h1>
           </Link>
           <ul className="nav-list">
             <Link to="/" className="link-logo">

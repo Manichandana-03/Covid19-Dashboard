@@ -3,10 +3,16 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 30px;
-  margin-bottom: 60px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .stateCards-container {
+    margin-top: 30px;
+    margin-bottom: 60px;
 
-  width: 80%;
+    width: 80%;
+  }
 }
 .stateCard-background {
   display: flex;
@@ -14,24 +20,43 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
-  padding: 20px;
-  width: 200px;
+  border-radius: 8px;
+  width: 140px;
+  height: 140px;
   border: 0px;
+  margin: 10px;
 }
 .home-paragraph-heading {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
+  text-align: center;
 }
 .paragraph-heading {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 16px;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .stateCard-background {
+    border-radius: 12px;
+    padding: 20px;
+    width: 200px;
+    border: 0px;
+    height: 200px;
+    margin: 0px;
+  }
+  .home-paragraph-heading {
+    font-size: 16px;
+  }
+  .paragraph-heading {
+    font-size: 24px;
+  }
+}
+
 .red {
   color: #ff073a;
 }
@@ -44,9 +69,7 @@
 .grey {
   color: #6c757d;
 }
-.background-color {
-  background-color: #331427;
-}
+
 .Active {
   background-color: #132240;
 }
@@ -58,4 +81,13 @@
 }
 .Confirmed {
   background-color: #331427;
+}
+
+.home-cards-logo {
+  width: 24px;
+}
+@media screen and (min-width: 768px) {
+  .home-cards-logo {
+    width: 38px;
+  }
 }

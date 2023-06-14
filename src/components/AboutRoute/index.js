@@ -39,19 +39,24 @@ class AboutRoute extends Component {
             <Loader type="Oval" color="#007BFF" height={50} width={50} />
           </div>
         ) : (
-          <div>
-            <h1 className="about-heading">About</h1>
-            <p className="last-update">Last update on march 28th 2021.</p>
-            <h2 className="sub-heading">
-              COVID-19 vaccines be ready for distribution
-            </h2>
-            <ul className="ul-list">
-              {aboutQAList.faq.map(eachQuestion => (
-                <QuestionAnswer key={eachQuestion.qno} details={eachQuestion} />
-              ))}
-            </ul>
+          <>
+            <div>
+              <h1 className="about-heading">About</h1>
+              <p className="last-update">Last update on march 28th 2021.</p>
+              <h2 className="sub-heading">
+                COVID-19 vaccines be ready for distribution
+              </h2>
+              <ul className="ul-list">
+                {aboutQAList.faq.map(eachQuestion => (
+                  <QuestionAnswer
+                    key={eachQuestion.qno}
+                    details={eachQuestion}
+                  />
+                ))}
+              </ul>
+            </div>
             <Footer />
-          </div>
+          </>
         )}
       </div>
     )

@@ -30,20 +30,30 @@
   font-family: 'Bree Serif';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
   text-align: center;
   color: #f8fafc;
 }
 
-@media screen and (min-width: 768px) {
-  .app-name {
-    font-size: 20px;
-  }
-}
-
 .blue-text {
   color: #3b82f6;
+}
+
+@media screen and (min-width: 768px) {
+  .app-name {
+    font-family: 'Bree Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #f8fafc;
+  }
+
+  .blue-text {
+    color: #3b82f6;
+  }
 }
 
 .menu-button {

@@ -6,6 +6,7 @@
   background-color: #161625;
   min-height: 100vh;
   text-align: left;
+  min-width: 100%;
 }
 
 .about-heading {
@@ -13,26 +14,46 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 48px;
-  padding-left: 105px;
+  font-size: 24px;
+  padding-left: 100px;
+}
+@media screen and (min-width: 768px) {
+  .about-heading {
+    font-size: 48px;
+    padding-left: 105px;
+  }
 }
 .last-update {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 16px;
   color: #94a3b8;
-  padding-left: 105px;
+  padding-left: 100px;
+}
+@media screen and (min-width: 768px) {
+  .last-update {
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 105px;
+  }
 }
 .sub-heading {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 16px;
+  line-height: 24px;
   color: #e2e8f0;
-  padding-left: 105px;
+  padding-left: 100px;
+}
+@media screen and (min-width: 768px) {
+  .sub-heading {
+    font-size: 24px;
+    line-height: 36px;
+    padding-left: 105px;
+  }
 }
 .ul-list {
   list-style-type: none;
