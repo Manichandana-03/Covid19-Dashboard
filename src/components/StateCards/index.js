@@ -70,6 +70,7 @@ class StateCards extends Component {
           type="button"
           className={`stateCard-background  ${confirmedCard.name}`}
           value={confirmedCard.name}
+          testid="stateSpecificConfirmedCasesContainer"
           onClick={() => this.cardClick(confirmedCard.name)}
         >
           <p className="home-paragraph-heading red">{confirmedCard.name}</p>
@@ -86,12 +87,13 @@ class StateCards extends Component {
           className={`stateCard-background  ${activeCard.name}`}
           value={activeCard.name}
           tabIndex="-1"
+          testid="stateSpecificActiveCasesContainer"
           onClick={() => this.cardClick(activeCard.name)}
         >
           <p className="home-paragraph-heading blue">{activeCard.name}</p>
           <img
             src={activeCard.logo}
-            alt="state specific confirmed cases pic"
+            alt="state specific active cases pic"
             className="home-cards-logo"
           />
           <p className="paragraph-heading blue">{activeCard.value}</p>
@@ -102,12 +104,13 @@ class StateCards extends Component {
           className={`stateCard-background  ${recoveredCard.name}`}
           value={recoveredCard.name}
           tabIndex="-1"
+          testid="stateSpecificRecoveredCasesContainer"
           onClick={() => this.cardClick(recoveredCard.name)}
         >
           <p className="home-paragraph-heading green">{recoveredCard.name}</p>
           <img
             src={recoveredCard.logo}
-            alt="state specific confirmed cases pic"
+            alt="state specific recovered cases pic"
             className="home-cards-logo"
           />
           <p className="paragraph-heading green">{recoveredCard.value}</p>
@@ -118,12 +121,13 @@ class StateCards extends Component {
           className={`stateCard-background  ${deceasedCard.name}`}
           value={deceasedCard.name}
           tabIndex="-1"
+          testid="stateSpecificDeceasedCasesContainer"
           onClick={() => this.cardClick(deceasedCard.name)}
         >
           <p className="home-paragraph-heading grey">{deceasedCard.name}</p>
           <img
             src={deceasedCard.logo}
-            alt="state specific confirmed cases pic"
+            alt="state specific deceased cases pic"
             className="home-cards-logo"
           />
           <p className="paragraph-heading grey">{deceasedCard.value}</p>

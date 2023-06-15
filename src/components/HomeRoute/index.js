@@ -270,7 +270,7 @@ class HomeRoute extends Component {
     console.log(listOfCovidStates)
 
     return (
-      <div className="state-table">
+      <div className="state-table" testid="stateWiseCovidDataTable">
         <div className="state-result-heading">
           <div className="state-ul-container">
             <p className="home-table-state-paragraph">States/UT</p>
@@ -278,6 +278,7 @@ class HomeRoute extends Component {
               type="button"
               className="icon-button"
               onClick={this.ascSortClicked}
+              testid="ascendingSort"
             >
               <FcGenericSortingAsc className="order-icon" />
             </button>
@@ -285,6 +286,7 @@ class HomeRoute extends Component {
               type="button"
               className="icon-button"
               onClick={this.decSortClicked}
+              testid="descendingSort"
             >
               <FcGenericSortingDesc className="order-icon" />
             </button>
@@ -317,7 +319,7 @@ class HomeRoute extends Component {
   listOfSearch = () => {
     const {listOfSearchState} = this.state
     return (
-      <ul className="search-container">
+      <ul className="search-container" testid="searchResultsUnorderedList">
         {listOfSearchState.map(eachItem => (
           <SearchState
             stateName={eachItem.state_name}
@@ -341,7 +343,7 @@ class HomeRoute extends Component {
     return (
       <>
         <div className="card-container-row">
-          <div className="card-list">
+          <div className="card-list" testid="countryWideConfirmedCases">
             <p className="home-paragraph-heading red">Confirmed</p>
             <img
               src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416085/Group_wu2hir.png"
@@ -350,7 +352,7 @@ class HomeRoute extends Component {
             />
             <p className="paragraph-heading red">{totalConfirmed}</p>
           </div>
-          <div className="card-list">
+          <div className="card-list" testid="countryWideActiveCases">
             <p className="home-paragraph-heading blue">Active</p>
             <img
               src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416117/protection_1_zbily8.png"
@@ -359,7 +361,7 @@ class HomeRoute extends Component {
             />
             <p className="paragraph-heading blue">{totalActive}</p>
           </div>
-          <div className="card-list">
+          <div className="card-list" testid="countryWideRecoveredCases">
             <p className="home-paragraph-heading green">Recovered</p>
             <img
               src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416118/recovered_1_b5nwsn.png"
@@ -368,11 +370,11 @@ class HomeRoute extends Component {
             />
             <p className="paragraph-heading green">{totalRecovered}</p>
           </div>
-          <div className="card-list">
+          <div className="card-list" testid="countryWideDeceasedCases">
             <p className="home-paragraph-heading gray">Deceased</p>
             <img
               src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416117/Corona_Virus_Symptoms_Shortness_of_breath_apqhli.png"
-              alt="country wide decreased cases pic"
+              alt="country wide deceased cases pic"
               className="home-cards-logo"
             />
             <p className="paragraph-heading gray">{totalDeceased}</p>
@@ -389,7 +391,7 @@ class HomeRoute extends Component {
     return (
       <div className="covid-home-container">
         {isLoading ? (
-          <div className="loader-class">
+          <div className="loader-class" testid="homeRouteLoader">
             <Loader type="Oval" color="#007BFF" height={50} width={50} />
           </div>
         ) : (

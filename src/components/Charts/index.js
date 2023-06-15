@@ -70,7 +70,7 @@ class Charts extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="loader-class">
+    <div className="loader-class" testid="timelinesDataLoader">
       <Loader type="Oval" color="#007BFF" height={50} width={50} />
     </div>
   )

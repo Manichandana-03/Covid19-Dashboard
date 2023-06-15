@@ -35,7 +35,7 @@ class AboutRoute extends Component {
     return (
       <div className="about-container">
         {isLoading ? (
-          <div className="loader-class">
+          <div className="loader-class" testid="aboutRouteLoader">
             <Loader type="Oval" color="#007BFF" height={50} width={50} />
           </div>
         ) : (
@@ -46,7 +46,7 @@ class AboutRoute extends Component {
               <h2 className="sub-heading">
                 COVID-19 vaccines be ready for distribution
               </h2>
-              <ul className="ul-list">
+              <ul className="ul-list" testid="faqsUnorderedList">
                 {aboutQAList.faq.map(eachQuestion => (
                   <QuestionAnswer
                     key={eachQuestion.qno}
