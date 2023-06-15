@@ -20,14 +20,24 @@ const ListOfState = props => {
 
   return (
     <li className="list-state-class">
-      <Link to={`/state/${stateCode}`} className="link-class">
-        <p className="state-name-class">{stateName}</p>
-      </Link>
+      <div className="states-container-home">
+        <Link to={`/state/${stateCode}`} className="link-class">
+          <p className="state-name-class">{stateName}</p>
+        </Link>
+      </div>
       <div className="stats-container">
         <p className="state-confirmed">{listOfConfirmed}</p>
+      </div>
+      <div className="stats-container">
         <p className="state-active">{active}</p>
+      </div>
+      <div className="stats-container">
         <p className="state-recovered">{listOfRecovered}</p>
+      </div>
+      <div className="stats-container">
         <p className="state-decreased">{listOfDeceased}</p>
+      </div>
+      <div className="stats-container">
         <p className="state-population">{listOfPopulation}</p>
       </div>
     </li>

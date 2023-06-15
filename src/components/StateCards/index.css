@@ -25,6 +25,8 @@
   height: 140px;
   border: 0px;
   margin: 10px;
+  cursor: pointer;
+  outline: none;
 }
 .home-paragraph-heading {
   font-family: 'Roboto';

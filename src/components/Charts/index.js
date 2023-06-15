@@ -95,7 +95,7 @@ class Charts extends Component {
     }
 
     return (
-      <div className="chart-wrapper">
+      <>
         <BarChart width={800} height={500} data={toptendata} barSize={45}>
           <XAxis
             dataKey="date"
@@ -116,14 +116,14 @@ class Charts extends Component {
             radius={[8, 8, 0, 0]}
           />
         </BarChart>
-      </div>
+      </>
     )
   }
 
   graph = (type, color) => {
     const {forOtherChart} = this.state
     return (
-      <div>
+      <>
         <LineChart
           width={800}
           height={250}
@@ -144,7 +144,7 @@ class Charts extends Component {
           <Legend />
           <Line type="monotone" dataKey={type} stroke={color} />
         </LineChart>
-      </div>
+      </>
     )
   }
 

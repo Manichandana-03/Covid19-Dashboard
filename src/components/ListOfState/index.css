@@ -1,15 +1,17 @@
 .list-state-class {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
-  align-items: flex-start;
-
+  align-items: center;
+  list-style-type: none;
   margin-left: 0px;
+}
+.states-container-home {
+  width: 22%;
 }
 .link-class {
   text-decoration: none;
-  width: 20%;
 }
 .state-name-class {
   font-family: 'Roboto';
@@ -18,8 +20,15 @@
   font-size: 14px;
   line-height: 24px;
   color: #f1f5f9;
-  text-align: left;
-  margin-left: 0px;
+
+  padding: 0px 32px;
+}
+.stats-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 15.6%;
 }
 .state-confirmed {
   font-family: 'Roboto';
@@ -28,7 +37,6 @@
   font-size: 14px;
   line-height: 24px;
   color: #ff073a;
-  text-align: right;
 }
 .state-active {
   font-family: 'Roboto';
@@ -37,7 +45,6 @@
   font-size: 14px;
   line-height: 24px;
   color: #007bff;
-  text-align: right;
 }
 .state-recovered {
   font-family: 'Roboto';
@@ -46,7 +53,6 @@
   font-size: 14px;
   line-height: 24px;
   color: #28a745;
-  text-align: right;
 }
 .state-decreased {
   font-family: 'Roboto';
@@ -55,7 +61,6 @@
   font-size: 14px;
   line-height: 24px;
   color: #4519ad;
-  text-align: right;
 }
 .state-population {
   font-family: 'Roboto';
@@ -64,12 +69,4 @@
   font-size: 14px;
   line-height: 24px;
   color: #94a3b8;
-  text-align: right;
-}
-.stats-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
 }

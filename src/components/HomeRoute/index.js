@@ -279,21 +279,31 @@ class HomeRoute extends Component {
               className="icon-button"
               onClick={this.ascSortClicked}
             >
-              <FcGenericSortingAsc className="ascending-icon" />
+              <FcGenericSortingAsc className="order-icon" />
             </button>
             <button
               type="button"
               className="icon-button"
               onClick={this.decSortClicked}
             >
-              <FcGenericSortingDesc className="descending-icon" />
+              <FcGenericSortingDesc className="order-icon" />
             </button>
           </div>
-          <p className="general-column-title">Confirmed</p>
-          <p className="general-column-title">Active</p>
-          <p className="general-column-title">Recovered</p>
-          <p className="general-column-title">Deceased</p>
-          <p className="general-column-title">Population</p>
+          <div className="other-tables-bar">
+            <p className="general-column-title">Confirmed</p>
+          </div>
+          <div className="other-tables-bar">
+            <p className="general-column-title">Active</p>
+          </div>
+          <div className="other-tables-bar">
+            <p className="general-column-title">Recovered</p>
+          </div>
+          <div className="other-tables-bar">
+            <p className="general-column-title">Deceased</p>
+          </div>
+          <div className="other-tables-bar">
+            <p className="general-column-title">Population</p>
+          </div>
         </div>
         <ul className="state-result-table">
           {listOfCovidStates.map(eachItem => (

@@ -4,8 +4,12 @@ const TopDistricts = props => {
   const {topDistrictsNumber, topDistrictsName} = props
   return (
     <li className="topDistricts-list">
-      <p className="topDistricts-paragraph">{topDistrictsNumber}</p>
-      <p className="topDistricts-name">{topDistrictsName}</p>
+      <div className="align">
+        <p className="topDistricts-paragraph">{topDistrictsNumber}</p>
+      </div>
+      <div className="align">
+        <p className="topDistricts-name">{topDistrictsName}</p>
+      </div>
     </li>
   )
 }
