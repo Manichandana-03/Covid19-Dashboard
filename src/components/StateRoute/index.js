@@ -312,10 +312,7 @@ class StateRoute extends Component {
             Top Districts
           </h1>
           <div className="ul-container">
-            <ul
-              className="stateRoute-top-district-list"
-              testid="topDistrictsUnorderedList"
-            >
+            <ul className="stateRoute-top-district-list">
               {topDistricts.map(eachItem => (
                 <TopDistricts
                   topDistrictsNumber={eachItem.districtValue}
@@ -326,10 +323,7 @@ class StateRoute extends Component {
             </ul>
           </div>
         </div>
-        <div
-          className="stateRoute-chart-container"
-          testid="lineChartsContainer"
-        >
+        <div className="stateRoute-chart-container">
           <Charts category={category} stateCode={stateCode} />
         </div>
       </div>
@@ -343,7 +337,7 @@ class StateRoute extends Component {
         <Header />
         <div className="route-container">
           {isLoading ? (
-            <div className="loader-class" testid="stateDetailsLoader">
+            <div className="loader-class">
               <Loader type="Oval" color="#007BFF" height={50} width={50} />
             </div>
           ) : (

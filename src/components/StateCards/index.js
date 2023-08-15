@@ -25,25 +25,25 @@ class StateCards extends Component {
     const confirmedCard = {
       name: 'Confirmed',
       logo:
-        'https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416085/Group_wu2hir.png',
+        'https://res.cloudinary.com/dfaxacnyf/image/upload/v1692069854/check-mark_1_xc56lx.png',
       value: districtConfirmed,
     }
     const activeCard = {
       name: 'Active',
       logo:
-        'https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416117/protection_1_zbily8.png',
+        'https://res.cloudinary.com/dfaxacnyf/image/upload/v1692069854/protection_2_lw4ehl.png',
       value: districtActive,
     }
     const recoveredCard = {
       name: 'Recovered',
       logo:
-        'https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416118/recovered_1_b5nwsn.png',
+        'https://res.cloudinary.com/dfaxacnyf/image/upload/v1692069854/recovered_1_mugyb8.png',
       value: districtRecovered,
     }
     const deceasedCard = {
       name: 'Deceased',
       logo:
-        'https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416117/Corona_Virus_Symptoms_Shortness_of_breath_apqhli.png',
+        'https://res.cloudinary.com/dfaxacnyf/image/upload/v1692069854/breathing_1_d04wui.png',
       value: districtDeceased,
     }
     console.log(`districtDeceased = ${districtDeceased}`)
@@ -70,7 +70,6 @@ class StateCards extends Component {
           type="button"
           className={`stateCard-background  ${confirmedCard.name}`}
           value={confirmedCard.name}
-          testid="stateSpecificConfirmedCasesContainer"
           onClick={() => this.cardClick(confirmedCard.name)}
         >
           <p className="home-paragraph-heading red">{confirmedCard.name}</p>
@@ -87,7 +86,6 @@ class StateCards extends Component {
           className={`stateCard-background  ${activeCard.name}`}
           value={activeCard.name}
           tabIndex="-1"
-          testid="stateSpecificActiveCasesContainer"
           onClick={() => this.cardClick(activeCard.name)}
         >
           <p className="home-paragraph-heading blue">{activeCard.name}</p>
@@ -104,7 +102,6 @@ class StateCards extends Component {
           className={`stateCard-background  ${recoveredCard.name}`}
           value={recoveredCard.name}
           tabIndex="-1"
-          testid="stateSpecificRecoveredCasesContainer"
           onClick={() => this.cardClick(recoveredCard.name)}
         >
           <p className="home-paragraph-heading green">{recoveredCard.name}</p>
@@ -121,7 +118,6 @@ class StateCards extends Component {
           className={`stateCard-background  ${deceasedCard.name}`}
           value={deceasedCard.name}
           tabIndex="-1"
-          testid="stateSpecificDeceasedCasesContainer"
           onClick={() => this.cardClick(deceasedCard.name)}
         >
           <p className="home-paragraph-heading grey">{deceasedCard.name}</p>

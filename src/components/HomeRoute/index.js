@@ -270,7 +270,7 @@ class HomeRoute extends Component {
     console.log(listOfCovidStates)
 
     return (
-      <div className="state-table" testid="stateWiseCovidDataTable">
+      <div className="state-table">
         <div className="state-result-heading">
           <div className="state-ul-container">
             <p className="home-table-state-paragraph">States/UT</p>
@@ -278,7 +278,6 @@ class HomeRoute extends Component {
               type="button"
               className="icon-button"
               onClick={this.ascSortClicked}
-              testid="ascendingSort"
             >
               <FcGenericSortingAsc className="order-icon" />
             </button>
@@ -286,7 +285,6 @@ class HomeRoute extends Component {
               type="button"
               className="icon-button"
               onClick={this.decSortClicked}
-              testid="descendingSort"
             >
               <FcGenericSortingDesc className="order-icon" />
             </button>
@@ -319,7 +317,7 @@ class HomeRoute extends Component {
   listOfSearch = () => {
     const {listOfSearchState} = this.state
     return (
-      <ul className="search-container" testid="searchResultsUnorderedList">
+      <ul className="search-container">
         {listOfSearchState.map(eachItem => (
           <SearchState
             stateName={eachItem.state_name}
@@ -343,37 +341,37 @@ class HomeRoute extends Component {
     return (
       <>
         <div className="card-container-row">
-          <div className="card-list" testid="countryWideConfirmedCases">
+          <div className="card-list">
             <p className="home-paragraph-heading red">Confirmed</p>
             <img
-              src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416085/Group_wu2hir.png"
+              src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1692069854/check-mark_1_xc56lx.png"
               alt="country wide confirmed cases pic"
               className="home-cards-logo"
             />
             <p className="paragraph-heading red">{totalConfirmed}</p>
           </div>
-          <div className="card-list" testid="countryWideActiveCases">
+          <div className="card-list">
             <p className="home-paragraph-heading blue">Active</p>
             <img
-              src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416117/protection_1_zbily8.png"
+              src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1692069854/protection_2_lw4ehl.png"
               alt="country wide active cases pic"
               className="home-cards-logo"
             />
             <p className="paragraph-heading blue">{totalActive}</p>
           </div>
-          <div className="card-list" testid="countryWideRecoveredCases">
+          <div className="card-list">
             <p className="home-paragraph-heading green">Recovered</p>
             <img
-              src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416118/recovered_1_b5nwsn.png"
+              src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1692069854/recovered_1_mugyb8.png"
               alt="country wide recovered cases pic"
               className="home-cards-logo"
             />
             <p className="paragraph-heading green">{totalRecovered}</p>
           </div>
-          <div className="card-list" testid="countryWideDeceasedCases">
+          <div className="card-list">
             <p className="home-paragraph-heading gray">Deceased</p>
             <img
-              src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1686416117/Corona_Virus_Symptoms_Shortness_of_breath_apqhli.png"
+              src="https://res.cloudinary.com/dfaxacnyf/image/upload/v1692069854/breathing_1_d04wui.png"
               alt="country wide deceased cases pic"
               className="home-cards-logo"
             />
@@ -391,7 +389,7 @@ class HomeRoute extends Component {
     return (
       <div className="covid-home-container">
         {isLoading ? (
-          <div className="loader-class" testid="homeRouteLoader">
+          <div className="loader-class">
             <Loader type="Oval" color="#007BFF" height={50} width={50} />
           </div>
         ) : (

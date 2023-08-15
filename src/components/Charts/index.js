@@ -8,6 +8,7 @@ import {
   Legend,
   BarChart,
   Bar,
+  ResponsiveContainer,
 } from 'recharts'
 import Loader from 'react-loader-spinner'
 import './index.css'
@@ -70,7 +71,7 @@ class Charts extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="loader-class" testid="timelinesDataLoader">
+    <div className="loader-class">
       <Loader type="Oval" color="#007BFF" height={50} width={50} />
     </div>
   )
@@ -96,26 +97,28 @@ class Charts extends Component {
 
     return (
       <>
-        <BarChart width={800} height={500} data={toptendata} barSize={45}>
-          <XAxis
-            dataKey="date"
-            stroke={`${colortype}`}
-            style={{
-              fontFamily: 'Roboto',
-              fontWeight: 500,
-              textTransform: 'uppercase',
-            }}
-            dy={10}
-          />
-          <Tooltip />
-          <Legend />
-          <Bar
-            dataKey={`${barChartType}`}
-            fill={`${colortype}`}
-            label={{position: 'top', fill: '#fff'}}
-            radius={[8, 8, 0, 0]}
-          />
-        </BarChart>
+        <ResponsiveContainer width="95%" height={400}>
+          <BarChart data={toptendata} barSize={45}>
+            <XAxis
+              dataKey="date"
+              stroke={`${colortype}`}
+              style={{
+                fontFamily: 'Roboto',
+                fontWeight: 500,
+                textTransform: 'uppercase',
+              }}
+              dy={10}
+            />
+            <Tooltip />
+            <Legend />
+            <Bar
+              dataKey={`${barChartType}`}
+              fill={`${colortype}`}
+              label={{position: 'top', fill: '#fff'}}
+              radius={[8, 8, 0, 0]}
+            />
+          </BarChart>
+        </ResponsiveContainer>
       </>
     )
   }
@@ -124,26 +127,28 @@ class Charts extends Component {
     const {forOtherChart} = this.state
     return (
       <>
-        <LineChart
-          width={800}
-          height={250}
-          data={forOtherChart}
-          margin={{top: 5, right: 30, left: 20, bottom: 5}}
-        >
-          <XAxis
-            dataKey="date"
-            style={{
-              fontFamily: 'Roboto',
-              fontWeight: 500,
-              textTransform: 'uppercase',
-            }}
-            dy={10}
-          />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey={type} stroke={color} />
-        </LineChart>
+        <ResponsiveContainer>
+          <LineChart
+            width={800}
+            height={250}
+            data={forOtherChart}
+            margin={{top: 5, right: 30, left: 20, bottom: 5}}
+          >
+            <XAxis
+              dataKey="date"
+              style={{
+                fontFamily: 'Roboto',
+                fontWeight: 500,
+                textTransform: 'uppercase',
+              }}
+              dy={10}
+            />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Line type="monotone" dataKey={type} stroke={color} />
+          </LineChart>
+        </ResponsiveContainer>
       </>
     )
   }
